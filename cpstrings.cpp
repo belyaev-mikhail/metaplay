@@ -198,6 +198,8 @@ OF(OF(TPARAM())TPARAM(Arg)) DEF(splus) {
 };
 
 
+
+
 ////////////////////////////////////////////////sor
 
 OF(OF(TPARAM())TPARAM(...Args)) DEF(sor);
@@ -249,6 +251,9 @@ OF(OF(TPARAM())TPARAM(Delegate)) DEF(optional) {
 		TLET(result, typename step2::result)
 	};
 };
+
+////////////////////////////////////////////////sstar
+OF(OF(TPARAM())TPARAM(Arg)) DEF(sstar) : optional<splus<Arg>::template inner> {};
 
 ////////////////////////////////////////////////snot
 OF(IPARAM(togo), TPARAM(Elem), TPARAM(PState)) DEF(snot_step2);
